@@ -11,22 +11,54 @@ class StringFunTests {
 
     fun lpadParam(): Array<Any> = arrayOf(
         arrayOf("123", 6, '0', "000123"),
+        arrayOf("ABC", 3, '0', "ABC"),
         arrayOf("A", 10, 'X', "XXXXXXXXXA"),
         arrayOf("XYZ", 0, '0', "XYZ"),
-        arrayOf("", 4, '0', "0000")
+        arrayOf("", 4, '0', "0000"),
+        arrayOf("12345", 3, '0', "12345"),
+        arrayOf("XYZ", -1, '0', "XYZ")
     )
 
 
     @Test
     @Parameters(method = "lpadParam")
-    fun `given correct args when execute lpad then return correct result`(
+    fun `exec LeftPadding with correct args then return expected result`(
         inputStr: String,
         padLen: Int,
         padChar: Char,
         expectedResult: String
     ) {
-        val result = inputStr.leftPadding(padLen, padChar)
+        val actualResult = inputStr.leftPadding(padLen, padChar)
 
-        assertThat(result).isEqualTo(expectedResult)
+        assertThat(actualResult)
+            .isNotNull()
+            .isNotEmpty()
+            .isEqualTo(expectedResult)
+    }
+
+    fun rpadParam(): Array<Any> = arrayOf(
+        arrayOf("123", 6, '0', "123000"),
+        arrayOf("ABC", 3, '0', "ABC"),
+        arrayOf("A", 10, 'X', "AXXXXXXXXX"),
+        arrayOf("XYZ", 0, '0', "XYZ"),
+        arrayOf("", 4, '0', "0000"),
+        arrayOf("12345", 3, '0', "12345"),
+        arrayOf("XYZ", -1, '0', "XYZ")
+    )
+
+    @Test
+    @Parameters(method = "rpadParam")
+    fun `exec RightPadding with correct args then return expected result`(
+        inputStr: String,
+        padLen: Int,
+        padChar: Char,
+        expectedResult: String
+    ) {
+        val actualResult = inputStr.rightPadding(padLen, padChar)
+
+        assertThat(actualResult)
+            .isNotNull()
+            .isNotEmpty()
+            .isEqualTo(expectedResult)
     }
 }
