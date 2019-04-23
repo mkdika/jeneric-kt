@@ -15,8 +15,8 @@ script:
   - ./gradlew test
   - ./gradlew check
   - ./gradlew build
-  - ./gradlew jacocoTestReport
   - ./gradlew pitest
+  - ./gradlew jacocoTestReport
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
