@@ -20,7 +20,6 @@ class StringFunTests {
         arrayOf("X", 1, '0', "X")
     )
 
-
     @Test
     @Parameters(method = "lpadParam")
     fun `exec LeftPadding with correct args then return expected result`(
