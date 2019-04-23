@@ -1,0 +1,26 @@
+language: kotlin
+sudo: false
+
+jdk:
+  - oraclejdk8
+
+before_install:
+  - chmod +x gradlew
+
+before_script:
+  - pip install --user codecov
+
+script:
+  - ./gradlew clean
+  - ./gradlew test
+  - ./gradlew check
+  - ./gradlew build
+  - ./gradlew jacocoTestReport
+  - ./gradlew pitest
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+
+branches:
+  only:
+    - master
