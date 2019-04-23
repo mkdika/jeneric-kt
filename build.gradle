@@ -10,13 +10,28 @@ buildscript {
 
 plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.2.71'
+    id 'info.solidsoft.pitest' version '1.4.0'
 }
+
+apply plugin: 'jacoco'
 
 group 'com.github.mkdika'
 version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
+}
+
+pitest {
+    targetClasses = ['com.github.mkdika.jenerickt.*']
+    threads = 4
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled = false
+        html.enabled = true
+    }
 }
 
 dependencies {

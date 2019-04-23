@@ -16,7 +16,8 @@ class StringFunTests {
         arrayOf("XYZ", 0, '0', "XYZ"),
         arrayOf("", 4, '0', "0000"),
         arrayOf("12345", 3, '0', "12345"),
-        arrayOf("XYZ", -1, '0', "XYZ")
+        arrayOf("XYZ", -1, '0', "XYZ"),
+        arrayOf("X", 1, '0', "X")
     )
 
 
@@ -43,7 +44,8 @@ class StringFunTests {
         arrayOf("XYZ", 0, '0', "XYZ"),
         arrayOf("", 4, '0', "0000"),
         arrayOf("12345", 3, '0', "12345"),
-        arrayOf("XYZ", -1, '0', "XYZ")
+        arrayOf("XYZ", -1, '0', "XYZ"),
+        arrayOf("X", 1, '0', "X")
     )
 
     @Test
