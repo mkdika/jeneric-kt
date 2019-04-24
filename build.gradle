@@ -29,13 +29,13 @@ pitest {
 }
 
 jacoco {
-    toolVersion = "0.8.3"
+    toolVersion = "0.8.2"
 }
 
 jacocoTestReport {
     reports {
-        xml.enabled = false
-        html.enabled = true
+        xml.enabled true
+        csv.enabled false
         html.destination file("${buildDir}/jacocoHtml")
     }
 }

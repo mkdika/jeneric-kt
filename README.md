@@ -9,6 +9,7 @@
 A tiny library for collection of custom yet frequently used function.
 Build on top of Kotlin and Java standard API, no external libraries is needed.
 
+> This work is in progress..
 
 ## Test, Build and Install
 
