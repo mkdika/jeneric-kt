@@ -8,12 +8,12 @@
 [![Known Vulnerabilities](https://snyk.io/test/github/mkdika/jeneric-kt/badge.svg?targetFile=build.gradle)](https://snyk.io/test/github/mkdika/jeneric-kt?targetFile=build.gradle)
 
 
-A tiny library for collection of custom yet frequently used function.
+A tiny library for collection of custom and frequently used high level function.
 Build on top of Kotlin and Java standard API, no external libraries is needed.
 
 > This work is in progress..
 
-## Test, Build and Install
+## Test and Build
 
 ### Requirement
 
@@ -23,40 +23,43 @@ Build on top of Kotlin and Java standard API, no external libraries is needed.
 
 #### Clean project
 
-```console
+```bash
 ./gradlew clean
 ```
 
 #### Unit test
 
-```console
+```bash
 ./gradlew test
 ```
 
 #### Coverage test
 
-```console
+```bash
 ./gradlew jacocoTestReport
 ```
 
 #### PiTest (Mutation Test)
 
-```console
+```bash
 ./gradlew pitest
 ```
 
 All generated test reports should be at `build/reports/`
 
-
 #### Build
 
-```console
+```bash
 ./gradlew build
 ```
 
-#### Install
 
-_Coming soon.._
+## Maintainer
+- [Maikel Chandika](https://github.com/mkdika)
+
+
+## Contributor
+Contributions are very welcome, please read [How to contribute](/CONTRIBUTING.md).
 
 
 ## License
