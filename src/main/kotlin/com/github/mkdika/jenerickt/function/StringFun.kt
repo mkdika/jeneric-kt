@@ -30,3 +30,14 @@ fun String.rightPadding(paddingLen: Int, paddingChar: Char): String {
         }
     }
 }
+
+fun String.leftSubstring(subLen: Int): String {
+
+    return when {
+        subLen < 1 -> ""
+        subLen > this.length -> this
+        else -> {
+            this.substring(0, subLen)
+        }
+    }
+}

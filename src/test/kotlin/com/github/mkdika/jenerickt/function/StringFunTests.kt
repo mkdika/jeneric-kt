@@ -9,7 +9,7 @@ import org.junit.runner.RunWith
 @RunWith(JUnitParamsRunner::class)
 class StringFunTests {
 
-    fun lpadParam(): Array<Any> = arrayOf(
+    fun lpadParams(): Array<Any> = arrayOf(
         arrayOf("123", 6, '0', "000123"),
         arrayOf("ABC", 3, '0', "ABC"),
         arrayOf("A", 10, 'X', "XXXXXXXXXA"),
@@ -21,7 +21,7 @@ class StringFunTests {
     )
 
     @Test
-    @Parameters(method = "lpadParam")
+    @Parameters(method = "lpadParams")
     fun `exec LeftPadding with correct args then return expected result`(
         inputStr: String,
         padLen: Int,
@@ -36,7 +36,7 @@ class StringFunTests {
             .isEqualTo(expectedResult)
     }
 
-    fun rpadParam(): Array<Any> = arrayOf(
+    fun rpadParams(): Array<Any> = arrayOf(
         arrayOf("123", 6, '0', "123000"),
         arrayOf("ABC", 3, '0', "ABC"),
         arrayOf("A", 10, 'X', "AXXXXXXXXX"),
@@ -48,7 +48,7 @@ class StringFunTests {
     )
 
     @Test
-    @Parameters(method = "rpadParam")
+    @Parameters(method = "rpadParams")
     fun `exec RightPadding with correct args then return expected result`(
         inputStr: String,
         padLen: Int,
@@ -60,6 +60,33 @@ class StringFunTests {
         assertThat(actualResult)
             .isNotNull()
             .isNotEmpty()
+            .isEqualTo(expectedResult)
+    }
+
+    fun leftSubstringParams(): Array<Any> = arrayOf(
+        arrayOf("apple", -1, ""),
+        arrayOf("apple", 0, ""),
+        arrayOf("apple", 1, "a"),
+        arrayOf("apple", 3, "app"),
+        arrayOf("apple", 5, "apple"),
+        arrayOf("apple", 6, "apple"),
+        arrayOf("apple", 10, "apple"),
+        arrayOf("", -1, ""),
+        arrayOf("", 0, ""),
+        arrayOf("", 5, "")
+    )
+
+    @Test
+    @Parameters(method = "leftSubstringParams")
+    fun `exec leftSubstring with args then return expected result`(
+        inputStr: String,
+        subLen: Int,
+        expectedResult: String
+    ) {
+        val actualResult = inputStr.leftSubstring(subLen = subLen)
+
+        assertThat(actualResult)
+            .isNotNull()
             .isEqualTo(expectedResult)
     }
 }
