@@ -14,9 +14,7 @@ script:
   - ./gradlew clean
   - ./gradlew test
   - ./gradlew check
-  - ./gradlew build
   - ./gradlew pitest
-  - ./gradlew jacocoTestReport
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
