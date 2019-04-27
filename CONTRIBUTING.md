@@ -21,7 +21,7 @@ Every PR will be reviewed and considered.
 * Try to write some unit test for your change. There are a lot of examples in the `test/kotlin` dir.
 * Add sufficient commit message along with Github issues number.
 * In order to maintain the standard quality of delivery, here are some metric that we used:
-	* Coverage test: __>= 90%__
+	* Coverage test: __>= 95%__
 	* Mutation test: __>= 60%__
 
 
