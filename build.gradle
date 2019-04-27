@@ -11,9 +11,9 @@ buildscript {
 plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.2.71'
     id 'info.solidsoft.pitest' version '1.4.0'
+    id 'java'
+    id 'jacoco'
 }
-
-apply plugin: 'jacoco'
 
 group 'com.github.mkdika'
 version '1.0.0'
@@ -23,20 +23,47 @@ repositories {
     mavenLocal()
 }
 
+test {
+    finalizedBy jacocoTestReport
+    finalizedBy jacocoTestCoverageVerification
+}
+
 pitest {
     targetClasses = ['com.github.mkdika.jenerickt.*']
+    outputFormats = ['XML', 'HTML']
     threads = 4
+    timestampedReports = false
 }
 
 jacoco {
     toolVersion = "0.8.3"
 }
 
+jacocoTestCoverageVerification {
+    violationRules {
+        rule {
+            limit {
+                counter = 'INSTRUCTION'
+                value = 'COVEREDRATIO'
+                minimum = 0.95
+            }
+            limit {
+                counter = 'LINE'
+                value = 'COVEREDRATIO'
+                minimum = 0.95
+            }
+        }
+    }
+}
+
 jacocoTestReport {
     reports {
         xml.enabled true
         csv.enabled false
-        html.destination file("${buildDir}/jacocoHtml")
+        html {
+            enabled true
+            html.destination file("${buildDir}/reports/jacoco")
+        }
     }
 }
 
