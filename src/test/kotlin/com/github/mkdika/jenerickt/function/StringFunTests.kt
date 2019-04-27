@@ -64,8 +64,8 @@ class StringFunTests {
     }
 
     fun leftSubstringParams(): Array<Any> = arrayOf(
-//        arrayOf("apple", -1, ""),
-//        arrayOf("apple", 0, ""),
+        arrayOf("apple", -1, ""),
+        arrayOf("apple", 0, ""),
 //        arrayOf("apple", 1, "a"),
 //        arrayOf("apple", 3, "app"),
 //        arrayOf("apple", 5, "apple"),
