@@ -38,6 +38,6 @@ Every PR will be reviewed and considered.
 ./gradlew pitest
 ```
 
-All generated test reports should be at `build/reports/`.
+All generated test reports can be found at `build/reports/`.
 
 Thanks! :heart:
