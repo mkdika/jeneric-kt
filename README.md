@@ -27,16 +27,10 @@ Build on top of Kotlin and Java standard API, no external libraries is needed.
 ./gradlew clean
 ```
 
-#### Unit test
+#### Unit test and coverage test
 
 ```bash
 ./gradlew test
-```
-
-#### Coverage test
-
-```bash
-./gradlew jacocoTestReport
 ```
 
 #### PiTest (Mutation Test)
@@ -45,7 +39,7 @@ Build on top of Kotlin and Java standard API, no external libraries is needed.
 ./gradlew pitest
 ```
 
-All generated test reports should be at `build/reports/`
+All generated test reports should be at `build/reports/`.
 
 #### Build
 

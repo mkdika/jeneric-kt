@@ -17,7 +17,6 @@ Every PR will be reviewed and considered.
 * Ask about the feature beforehand (or pick one of the open issues).
 * If no issue exists, create an issue for the PR.
 * Format your code so it looks somewhat like the rest of the source.
-* Write a proper and sufficient __javadoc__ for each method or attribute, give some example of usage if needed. Try to follow the style and convension from the existing code.
 * Try to write some unit test for your change. There are a lot of examples in the `test/kotlin` dir.
 * Add sufficient commit message along with Github issues number.
 * In order to maintain the standard quality of delivery, here are some metric that we used:
@@ -27,16 +26,10 @@ Every PR will be reviewed and considered.
 
 ### How to run the test
 
-#### Unit test
+#### Unit test and Coverage test
 
 ```bash
-./gradlew test
-```
-
-#### Coverage test
-
-```bash
-./gradlew jacocoTestReport
+./gradlew clean test
 ```
 
 #### Mutation test
@@ -44,5 +37,7 @@ Every PR will be reviewed and considered.
 ```bash
 ./gradlew pitest
 ```
+
+All generated test reports should be at `build/reports/`.
 
 Thanks! :heart:
