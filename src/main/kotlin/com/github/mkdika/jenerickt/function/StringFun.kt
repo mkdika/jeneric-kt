@@ -1,5 +1,7 @@
 package com.github.mkdika.jenerickt.function
 
+import java.math.BigDecimal
+
 fun String.leftPadding(paddingLen: Int, paddingChar: Char): String {
 
     return when {
