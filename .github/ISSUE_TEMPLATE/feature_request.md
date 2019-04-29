@@ -1,20 +1,14 @@
 ---
 name: Feature request
-about: Suggest an idea for this project
+about: Suggest an idea for this project or ask for feature.
 title: ''
 labels: feature
 assignees: mkdika
 
 ---
 
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+**Objective**
+_A clear and concise description of what you want to happen._
 
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
-
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
-
-**Additional context**
-Add any other context or screenshots about the feature request here.
+**Acceptance Criteria**
+_Put descriptions, list or input output example how this feature should be accepted._
