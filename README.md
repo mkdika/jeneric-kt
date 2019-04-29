@@ -56,5 +56,9 @@ All generated test reports should be at `build/reports/`.
 Contributions are very welcome, please read [How to contribute](/CONTRIBUTING.md).
 
 
+## Other version of Jeneric
+There is Java version of Jeneric, please refer to this [repository](https://github.com/mkdika/jeneric).
+
+
 ## License
 Licensed under the Apache License, Version 2.0. See [LICENSE](/LICENSE) file.

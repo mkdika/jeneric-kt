@@ -4,8 +4,9 @@
 ### Creating an issue
 * Reporting bug or hotfix, remember to include sufficient information.
 * New features or functions, remember to add sample cases.
-* Asking questions.
+* Asking questions or help.
 * Suggestions, advices and recommendations.
+* __Note:__ Please tag the proper available labels.
 
 
 ### Creating a PR
@@ -39,5 +40,12 @@ Every PR will be reviewed and considered.
 ```
 
 All generated test reports can be found at `build/reports/`.
+
+
+### Libraries used for test suite
+
+- [JUnit4](https://junit.org/junit4/)
+- [AssertJ 3.11](https://joel-costigliola.github.io/assertj/)
+- [JUnitParams 1.1.1](http://pragmatists.github.io/JUnitParams/)
 
 Thanks! :heart:
