@@ -3,7 +3,7 @@ name: Ask Question
 about: Ask question and help related to this project.
 title: ''
 labels: question
-assignees: mkdika
+assignees: ''
 
 ---
 
