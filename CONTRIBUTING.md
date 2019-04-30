@@ -47,5 +47,7 @@ All generated test reports can be found at `build/reports/`.
 - [JUnit4](https://junit.org/junit4/)
 - [AssertJ 3.11](https://joel-costigliola.github.io/assertj/)
 - [JUnitParams 1.1.1](http://pragmatists.github.io/JUnitParams/)
+- [Jacoco](https://docs.gradle.org/current/userguide/jacoco_plugin.html)
+- [PiTest](https://gradle-pitest-plugin.solidsoft.info/)
 
 Thanks! :heart:
