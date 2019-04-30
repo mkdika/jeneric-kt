@@ -13,40 +13,6 @@ Build on top of Kotlin and Java standard API, no external libraries is needed.
 
 > This work is in progress..
 
-## Test and Build
-
-### Requirement
-
-- Install JDK 8.
-
-### Test
-
-#### Clean project
-
-```bash
-./gradlew clean
-```
-
-#### Unit test and coverage test
-
-```bash
-./gradlew test
-```
-
-#### PiTest (Mutation Test)
-
-```bash
-./gradlew pitest
-```
-
-All generated test reports should be at `build/reports/`.
-
-#### Build
-
-```bash
-./gradlew build
-```
-
 
 ## Maintainer
 - [Maikel Chandika](https://github.com/mkdika)

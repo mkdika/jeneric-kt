@@ -27,6 +27,14 @@ Every PR will be reviewed and considered.
 
 ### How to run the test
 
+- __Requirement__: install JDK 8
+
+#### Clean project
+
+```bash
+./gradlew clean
+```
+
 #### Unit test and Coverage test
 
 ```bash
