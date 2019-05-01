@@ -16,6 +16,7 @@ Build on top of Kotlin and Java standard API, no extra libraries is needed.
 
 ## Maintainer
 - [Maikel Chandika](https://github.com/mkdika)
+- [Des Dulianto](https://github.com/desdulianto)
 
 
 ## Contributor
