@@ -8,8 +8,8 @@
 [![Known Vulnerabilities](https://snyk.io/test/github/mkdika/jeneric-kt/badge.svg?targetFile=build.gradle)](https://snyk.io/test/github/mkdika/jeneric-kt?targetFile=build.gradle)
 
 
-A tiny library for collection of custom and frequently used high level function.
-Build on top of Kotlin and Java standard API, no external libraries is needed.
+A Kotlin extension library for collection of custom and frequently used high level function.
+Build on top of Kotlin and Java standard API, no extra libraries is needed.
 
 > This work is in progress..
 
@@ -24,6 +24,8 @@ Contributions are very welcome, please read [How to contribute](/CONTRIBUTING.md
 
 ## Other version of Jeneric
 There is Java version of Jeneric, please refer to this [repository](https://github.com/mkdika/jeneric).
+Compare to Java version, there are several functions will not available in Kotlin version, due to already
+supported by Kotlin standard API.
 
 
 ## License
