@@ -120,4 +120,17 @@ class StringFunTests {
         assertThat(actual)
             .isEqualTo(expected)
     }
+
+    @Test
+    @Parameters(method="maskifyParams")
+    fun `maskify should using default char`(
+        input: String,
+        length: Int,
+        char: Char,
+        expected: String
+    ) {
+        val actual = input.maskify(length)
+        assertThat(actual)
+            .isEqualTo(expected.replace("@", "*"))
+    }
 }
