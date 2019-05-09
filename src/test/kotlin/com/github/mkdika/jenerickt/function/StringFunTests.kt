@@ -109,7 +109,7 @@ class StringFunTests {
 
     @Test
     @Parameters(method="maskifyParams")
-    fun `maskify with negative length should throws IllegalArgumentException`(
+    fun `maskify should return expected value`(
         input: String,
         length: Int,
         char: Char,
