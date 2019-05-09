@@ -91,13 +91,20 @@ class StringFunTests {
     }
 
     fun maskifyParams(): Array<Any> = arrayOf(
-        arrayOf("apple & a", -1, "apple & a"),
-        arrayOf("apple & a", 0, "apple & a"),
-        arrayOf("apple & a", 1, "*pple & a"),
-        arrayOf("apple & a", 3, "***le & a"),
-        arrayOf("apple & a", 5, "***** & a"),
-        arrayOf("apple & a", 6, "******& a"),
-        arrayOf("apple & a", 10, "*********")
+        arrayOf("apple & a", -1, '*', "apple & a"),
+        arrayOf("apple & a", 0, '*', "apple & a"),
+        arrayOf("apple & a", 1, '*', "*pple & a"),
+        arrayOf("apple & a", 3, '*', "***le & a"),
+        arrayOf("apple & a", 5, '*', "***** & a"),
+        arrayOf("apple & a", 6, '*', "******& a"),
+        arrayOf("apple & a", 10, '*', "*********"),
+        arrayOf("apple & a", -1, '@', "apple & a"),
+        arrayOf("apple & a", 0, '@', "apple & a"),
+        arrayOf("apple & a", 1, '@', "@pple & a"),
+        arrayOf("apple & a", 3, '@', "@@@le & a"),
+        arrayOf("apple & a", 5, '@', "@@@@@ & a"),
+        arrayOf("apple & a", 6, '@', "@@@@@@& a"),
+        arrayOf("apple & a", 10, '@', "@@@@@@@@@")
     )
 
     @Test
@@ -105,9 +112,10 @@ class StringFunTests {
     fun `maskify with negative length should throws IllegalArgumentException`(
         input: String,
         length: Int,
+        char: Char,
         expected: String
     ) {
-        val actual = input.maskify(length)
+        val actual = input.maskify(length, char)
 
         assertThat(actual)
             .isEqualTo(expected)
