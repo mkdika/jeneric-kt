@@ -93,17 +93,17 @@ class StringFunTests {
     fun maskifyParams(): Array<Any> = arrayOf(
         arrayOf("apple & a", -1, '*', "apple & a"),
         arrayOf("apple & a", 0, '*', "apple & a"),
-        arrayOf("apple & a", 1, '*', "*pple & a"),
-        arrayOf("apple & a", 3, '*', "***le & a"),
-        arrayOf("apple & a", 5, '*', "***** & a"),
-        arrayOf("apple & a", 6, '*', "******& a"),
+        arrayOf("apple & a", 1, '*', "apple & *"),
+        arrayOf("apple & a", 3, '*', "apple ***"),
+        arrayOf("apple & a", 5, '*', "appl*****"),
+        arrayOf("apple & a", 6, '*', "app******"),
         arrayOf("apple & a", 10, '*', "*********"),
         arrayOf("apple & a", -1, '@', "apple & a"),
         arrayOf("apple & a", 0, '@', "apple & a"),
-        arrayOf("apple & a", 1, '@', "@pple & a"),
-        arrayOf("apple & a", 3, '@', "@@@le & a"),
-        arrayOf("apple & a", 5, '@', "@@@@@ & a"),
-        arrayOf("apple & a", 6, '@', "@@@@@@& a"),
+        arrayOf("apple & a", 1, '@', "apple & @"),
+        arrayOf("apple & a", 3, '@', "apple @@@"),
+        arrayOf("apple & a", 5, '@', "appl@@@@@"),
+        arrayOf("apple & a", 6, '@', "app@@@@@@"),
         arrayOf("apple & a", 10, '@', "@@@@@@@@@")
     )
 
