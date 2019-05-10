@@ -49,3 +49,5 @@ fun String.maskify(length: Int): String =
         length >= 0 -> this.take(length).map{ "*" }.joinToString(separator="") + this.drop(length)
         else -> this
     }
+
+fun String.isPalindrome(): Boolean = this.reversed() == this

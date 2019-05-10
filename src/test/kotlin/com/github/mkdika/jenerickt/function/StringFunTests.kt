@@ -112,4 +112,23 @@ class StringFunTests {
         assertThat(actual)
             .isEqualTo(expected)
     }
+
+    fun palindromeParams(): Array<Any> = arrayOf(
+        arrayOf("able was I ere I saw elba", true),
+        arrayOf("aa", true),
+        arrayOf("a", true),
+        arrayOf("", true),
+        arrayOf("avid siva", false)
+    )
+
+    @Test
+    @Parameters(method="palindromeParams")
+    fun `isPalindrome should return expected values`(
+        input: String,
+        expected: Boolean
+    ) {
+        val actual = input.isPalindrome()
+
+        assertThat(actual).isEqualTo(expected)
+    }
 }
