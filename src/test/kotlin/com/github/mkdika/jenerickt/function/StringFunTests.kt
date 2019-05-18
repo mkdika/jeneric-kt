@@ -91,25 +91,46 @@ class StringFunTests {
     }
 
     fun maskifyParams(): Array<Any> = arrayOf(
-        arrayOf("apple & a", -1, "apple & a"),
-        arrayOf("apple & a", 0, "apple & a"),
-        arrayOf("apple & a", 1, "*pple & a"),
-        arrayOf("apple & a", 3, "***le & a"),
-        arrayOf("apple & a", 5, "***** & a"),
-        arrayOf("apple & a", 6, "******& a"),
-        arrayOf("apple & a", 10, "*********")
+        arrayOf("apple & a", -1, '*', "apple & a"),
+        arrayOf("apple & a", 0, '*', "apple & a"),
+        arrayOf("apple & a", 1, '*', "apple & *"),
+        arrayOf("apple & a", 3, '*', "apple ***"),
+        arrayOf("apple & a", 5, '*', "appl*****"),
+        arrayOf("apple & a", 6, '*', "app******"),
+        arrayOf("apple & a", 10, '*', "*********"),
+        arrayOf("apple & a", -1, '@', "apple & a"),
+        arrayOf("apple & a", 0, '@', "apple & a"),
+        arrayOf("apple & a", 1, '@', "apple & @"),
+        arrayOf("apple & a", 3, '@', "apple @@@"),
+        arrayOf("apple & a", 5, '@', "appl@@@@@"),
+        arrayOf("apple & a", 6, '@', "app@@@@@@"),
+        arrayOf("apple & a", 10, '@', "@@@@@@@@@")
     )
 
     @Test
     @Parameters(method="maskifyParams")
-    fun `maskify with negative length should throws IllegalArgumentException`(
+    fun `maskify should return expected value`(
         input: String,
         length: Int,
+        char: Char,
         expected: String
     ) {
-        val actual = input.maskify(length)
+        val actual = input.maskify(length, char)
 
         assertThat(actual)
             .isEqualTo(expected)
+    }
+
+    @Test
+    @Parameters(method="maskifyParams")
+    fun `maskify should using default char`(
+        input: String,
+        length: Int,
+        char: Char,
+        expected: String
+    ) {
+        val actual = input.maskify(length)
+        assertThat(actual)
+            .isEqualTo(expected.replace("@", "*"))
     }
 }

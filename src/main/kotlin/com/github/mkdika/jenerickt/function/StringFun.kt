@@ -44,8 +44,10 @@ fun String.leftSubstring(subLen: Int): String {
     }
 }
 
-fun String.maskify(length: Int): String =
+fun String.maskify(length: Int, char: Char='*'): String =
     when {
-        length >= 0 -> this.take(length).map{ "*" }.joinToString(separator="") + this.drop(length)
-        else -> this
+        length <= 0 -> this
+        this.length - length >= 0 -> this.leftSubstring(this.length - length) +
+                this.drop(this.length - length).map { char }.joinToString(separator="")
+        else -> this.map { char }.joinToString(separator="")
     }
