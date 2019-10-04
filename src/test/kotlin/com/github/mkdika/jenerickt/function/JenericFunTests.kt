@@ -16,7 +16,12 @@ class JenericFunTests {
             LocalDateTime.of(2018, 1, 10, 10, 30, 45)),
             DateRange(LocalDateTime.of(2018, 1, 10, 10, 30, 45),
                 LocalDateTime.of(2018, 1, 20, 10, 30, 45)),
-            true)
+            true),
+        arrayOf(DateRange(LocalDateTime.of(2018,1, 9, 10, 30, 45),
+            LocalDateTime.of(2018, 1, 10, 10, 30, 45)),
+            DateRange(LocalDateTime.of(2018, 1, 11, 10, 30, 45),
+                LocalDateTime.of(2018, 1, 20, 10, 30, 45)),
+            false)
     )
 
     @Test
