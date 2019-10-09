@@ -29,7 +29,7 @@ class GenericFunTests {
         expected: List<List<T>>
     ) {
         val actual = input.chunkList(chunkSize)
-        assertThat(actual).isEqualTo(expected)
+        assertThat(expected).isEqualTo(actual)
     }
 }
 
