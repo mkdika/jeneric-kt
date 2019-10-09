@@ -10,7 +10,7 @@ fun <T> List<T>.chunkList(chunkSize: Int): List<List<T>> =
             val leftOver = this.size - (chunkCount * chunkSize)
             for (i in 0 until chunkCount) {
                 val from = i * chunkSize
-                val to = if (from + chunkSize > this.size) this.size else from + chunkSize
+                val to = from + chunkSize
                 val items = this.subList(from, to)
                 chunks.add(items)
             }
